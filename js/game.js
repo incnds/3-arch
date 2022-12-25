@@ -6,8 +6,7 @@ const timeEl = document.querySelector("#time");
 const board = document.querySelector("#board");
 const screens = document.querySelectorAll(".screen");
 const answerButtons = document.querySelector(".buttons-content");
-const timeInfo = document.querySelectorAll(".time-info");
-
+const boardItemsContainers = document.querySelectorAll(".board-item");
 const boardItems = ["школа", "год постройки", "город", "фото-фрагмент"];
 
 let fullTime = 0;
@@ -100,6 +99,17 @@ const randomChurches = shuffle(churches);
 randomChurches.filter((e) => randomChurches.indexOf(e) < 6);
 let currentChurch;
 
+function openBoardItem(el, index) {
+    if (index === 3) {
+        el.style.backgroundImage = `url(${currentChurch.image})`;
+        el.innerHTML = "";
+    } else {
+        el.innerHTML = Object.values(currentChurch)[index + 1];
+    }
+    el.classList.add("board-open");
+    el.setAttribute("disabled", true);
+}
+
 function renderQuestion() {
     if (num < 6) {
         num = document.querySelector("#question-num").textContent = ++num;
@@ -117,12 +127,13 @@ function renderQuestion() {
                 answerBtn.textContent = randomAnswers.shift();
             }
         });
+        let openItemIndex = getRandomInt(4);
+        openBoardItem(boardItemsContainers[openItemIndex], openItemIndex);
     } else {
         isGame = false;
         finishGame();
     }
 }
-
 renderQuestion();
 
 function cleanBoard() {
@@ -139,18 +150,15 @@ board.addEventListener("click", (e) => {
     if (e.target.classList.contains("board-item")) {
         curScore -= cost;
         document.getElementById("max-cur-score").textContent = curScore;
-        let item = e.target.getAttribute("data-item");
-        if (item === "image") {
-            e.target.style.backgroundImage = `url(${currentChurch.image})`;
-            e.target.innerHTML = "";
-        } else {
-            e.target.innerHTML =
-                Object.values(currentChurch)[
-                    Object.keys(currentChurch).indexOf(item)
-                ];
-        }
-        e.target.setAttribute("disabled", true);
-        e.target.classList.add("board-open");
+        let itemIndex;
+        itemIndex =
+            e.target.id === "board-image"
+                ? 3
+                : Array.prototype.indexOf.call(
+                      e.target.parentElement.children,
+                      e.target
+                  );
+        openBoardItem(e.target, itemIndex);
     }
 });
 
@@ -164,8 +172,8 @@ function styleRightAnswerBtn(btn) {
         btn.style.color = "var(--style-4-bg-color)";
         btn.style.backgroundColor = "var(--style-1-bg-color)";
         btn.classList.remove("right-answer");
-        renderQuestion();
         cleanBoard();
+        renderQuestion();
         clearInterval(interval);
         if (isGame) {
             time = fullTime;
