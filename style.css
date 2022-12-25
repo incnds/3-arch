@@ -775,7 +775,9 @@ header .header-el {
     font-size: 1.75em;
 }
 
-.board-open {
+#board-style.board-open,
+#board-city.board-open,
+#board-year.board-open {
     color: var(--style-1-bg-color);
     background-color: #d1cfcf;
 }
