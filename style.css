@@ -546,7 +546,6 @@ header .header-el {
 
 .arch-info-3 {
     background-color: var(--style-3-bg-color);
-    /* display: none; */
 }
 
 .arch-info-3 .arch-info-content-img-container > p {
@@ -569,7 +568,6 @@ header .header-el {
 
 .arch-info-4 {
     background-color: var(--style-4-bg-color);
-    /* display: none; */
 }
 
 .arch-info-4 .info-grid,
@@ -787,8 +785,7 @@ header .header-el {
     width: 100%;
 }
 
-#board-image {
-    /* background-image: url("img/k-ch/bogorodici_prigoshi.jpg"); */
+#board-image { 
     background-size: cover;
 }
 
