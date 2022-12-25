@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Игра</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="vh100">
+        <div class="screen">
+            <h4>Выберите уровень сложности</h4>
+            <ul class="time-list" id="time-list">
+                <li>
+                    <button class="time-btn" data-time="20" data-cost="10">
+                        легкий
+                    </button>
+                    <p class="time-info">время: 20<br />подсказка: 10</p>
+                </li>
+                <li>
+                    <button class="time-btn" data-time="10" data-cost="20">
+                        стандартный
+                    </button>
+                    <p class="time-info">время: 10<br />подсказка: 20</p>
+                </li>
+                <li>
+                    <button class="time-btn" data-time="5" data-cost="30">
+                        сложный
+                    </button>
+                    <p class="time-info">время: 5<br />подсказка: 30</p>
+                </li>
+            </ul>
+        </div>
+        <div class="screen hide">
+            <div class="quiz-container">
+                <h3><span id="cur-score"></span> баллов</h3>
+                <p>
+                    максимум за этот вопрос
+                    <span id="max-cur-score"></span> баллов, стоимость подсказки
+                    <span id="cost"></span> баллов
+                </p>
+                <div id="time">00:00</div>
+                <div class="board" id="board">
+                    <div class="left">
+                        <button
+                            class="board-item"
+                            id="board-style"
+                            data-item="style"
+                        >
+                            <p>школа</p>
+                        </button>
+                        <button
+                            class="board-item"
+                            id="board-year"
+                            data-item="year"
+                        >
+                            <p>год постройки</p>
+                        </button>
+
+                        <button
+                            class="board-item"
+                            id="board-city"
+                            data-item="city"
+                        >
+                            <p>город</p>
+                        </button>
+                    </div>
+                    <div class="right">
+                        <button
+                            class="board-item"
+                            id="board-image"
+                            data-item="image"
+                        >
+                            <p>фото-фрагмент</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="buttons-content">
+                    <button class="answer-btn"></button>
+                    <button class="answer-btn"></button>
+                    <button class="answer-btn"></button>
+                    <button class="answer-btn"></button>
+                </div>
+                <h1><span id="question-num"></span> / 6</h1>
+            </div>
+            <div class="bg-transparent hide"></div>
+            <div class="score-container hide">
+                <h3>Счёт: <span id="score"></span></h3>
+                <nav class="navigation flex">
+                    <a href="index.html#main">главная</a>
+                    <a href="index.html#styles">школы</a>
+                    <a href="game.html">игра</a>
+                </nav>
+            </div>
+        </div>
+        <script src="js/game.js" type="module"></script>
+    </body>
+</html>

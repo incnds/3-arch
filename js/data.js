@@ -1,0 +1,88 @@
+const churches = [
+    {
+        name: "Борисоглебский собор",
+        style: "Киево-Черниговская",
+        year: 1120,
+        city: "Чернигов",
+        image: "'img/k-ch/borisoglebski.jpg'",
+    },
+    {
+        name: "Храм Успения Бог. Пирогощи",
+        style: "Киево-Черниговская",
+        year: 1136,
+        city: "Киев",
+        image: "'img/k-ch/bogorodici_prigoshi.jpg'",
+    },
+    {
+        name: "Пятницкая церковь",
+        style: "Киево-Черниговская",
+        year: 1200,
+        city: "Чернигов",
+        image: "'img/k-ch/pyatnickaya.jpg'",
+    },
+    {
+        name: "Дмитриевский собор",
+        style: "Владимиро-Суздальская",
+        year: 1194,
+        city: "Владимир",
+        image: "'img/v-s/dmitrievski.jpg'",
+    },
+    {
+        name: "Покрова на Нерли",
+        style: "Владимиро-Суздальская",
+        year: 1165,
+        city: "Боголюбово",
+        image: "'img/v-s/pokrova_na_nerli.jpg'",
+    },
+    {
+        name: "Успенский собор",
+        style: "Владимиро-Суздальская",
+        year: 1189,
+        city: "Владимир",
+        image: "'img/v-s/uspenski.jpg'",
+    },
+    {
+        name: "Церковь Спаса",
+        style: "Новгородско-Псковская",
+        year: 1374,
+        city: "Новгород",
+        image: "'img/n-p/tserkov_ilina.jpg'",
+    },
+    {
+        name: "Спасо-Преображенский собор",
+        style: "Новгородско-Псковская",
+        year: 1148,
+        city: "Псков",
+        image: "'img/n-p/mirozhski_monastir.jpg'",
+    },
+    {
+        name: "Церковь Николы со Усохи",
+        style: "Новгородско-Псковская",
+        year: 1535,
+        city: "Псков",
+        image: "'img/n-p/tserkov_nikolaya_usohi.jpg'",
+    },
+    {
+        name: "Успенский собор на Городке",
+        style: "Раннемосковская",
+        year: 1400,
+        city: "Звенигород",
+        image: "'img/r-m/uspenski_sobor.jpg'",
+    },
+    {
+        name: "Рождественский собор",
+        style: "Раннемосковская",
+        year: 1405,
+        city: "Звенигород",
+        image: "'img/r-m/rozhdestvenski.jpg'",
+    },
+    {
+        name: "Спасский собор",
+        style: "Раннемосковская",
+        year: 1427,
+        city: "Москва",
+        image: "'img/r-m/spasski_sobor.jpg'",
+    },
+];
+
+export default churches;
