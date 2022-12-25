@@ -1002,7 +1002,7 @@ header .header-el {
     }
 }
 
-@media (max-width: 800px) and (orientation: portrait) {
+@media (max-width: 950px) and (orientation: portrait) {
     :root {
         font-size: 18px;
     }
