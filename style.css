@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 @font-face {
     font-family: "Arina";
-    src: url("fonts/Arina.ttf") format("truetype")
+    src: url("fonts/Arina.ttf") format("truetype");
 }
 
 :root {
     font-size: 1.125em;
-    --light-font-color: #FFF;
-    --dark-font-color: #1C1C1C;
-    --main-bg-color: #F5F5F5;
+    --light-font-color: #fff;
+    --dark-font-color: #1c1c1c;
+    --main-bg-color: #f5f5f5;
     --border-grid-color: #686868;
     --style-1-bg-color: #484848;
-    --style-2-bg-color: #393F37;
-    --style-3-bg-color: #AAA9B2;
+    --style-2-bg-color: #393f37;
+    --style-3-bg-color: #aaa9b2;
     --style-4-bg-color: #858181;
 }
 
@@ -58,15 +58,17 @@ body {
 
 /* TEXT */
 
-h1, h2 {
+h1,
+h2 {
     font-family: "Arina";
     text-align: center;
     font-size: 4.8em;
     font-weight: 100;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
 }
 
-h3, h4 {
+h3,
+h4 {
     font-size: 1.3em;
     font-weight: 300;
     line-height: 1.3em;
@@ -109,7 +111,7 @@ button[disabled] {
 header {
     position: fixed;
     color: #252525;
-    padding: .8em 1.5em;
+    padding: 0.8em 1.5em;
     height: 90%;
     width: 5%;
     min-width: calc((100vw - 1350px) / 2);
@@ -128,17 +130,17 @@ header .header-el {
     position: absolute;
     transform: translateX(10%);
     font-size: 1.5em;
-    font-family: 'Arina', serif;
+    font-family: "Arina", serif;
 }
 
 .active::before {
     content: "(";
-    top: -.5em;
+    top: -0.5em;
 }
 
 .active::after {
     content: ")";
-    bottom: -.5em;
+    bottom: -0.5em;
 }
 
 /* ------------------ SCREEN ------------------ */
@@ -191,17 +193,17 @@ header .header-el {
     grid-column: 5/-1;
     justify-self: end;
     align-self: flex-end;
-    line-height: .5em;
+    line-height: 0.5em;
     font-size: calc(2em + 3vw);
 }
 
 .main-page .main-title:nth-child(2) {
-    margin-right: .8em;
+    margin-right: 0.8em;
 }
 
 .main-page .main-title:nth-child(3) {
     justify-self: start;
-    margin-left: .45em;
+    margin-left: 0.45em;
 }
 
 /* ------------------------------ ARCH STYLES ------------------------------ */
@@ -219,8 +221,8 @@ header .header-el {
 .nav-btn {
     font-weight: 400;
     font-size: 1.3em;
-    padding: .5em 1.5em;
-    transition: transform .5s ease-in-out;
+    padding: 0.5em 1.5em;
+    transition: transform 0.5s ease-in-out;
 }
 
 .cur-nav {
@@ -234,19 +236,19 @@ header .header-el {
 .cur-nav::after {
     position: absolute;
     font-size: 1.4em;
-    line-height: .9em;
-    font-family: 'Arina', serif;
+    line-height: 0.9em;
+    font-family: "Arina", serif;
     font-weight: 100;
 }
 
 .cur-nav::before {
     content: "(";
-    transform: translateX(-.5em);
+    transform: translateX(-0.5em);
 }
 
 .cur-nav::after {
     content: ")";
-    transform: translateX(.3em);
+    transform: translateX(0.3em);
 }
 
 /* ------------------------------ ARCH INFO COMMON ------------------------------ */
@@ -333,7 +335,8 @@ header .header-el {
     grid-row: 2/-1;
 }
 
-.main-line, .line {
+.main-line,
+.line {
     height: 3px;
     border-radius: 3px;
 }
@@ -364,7 +367,6 @@ header .header-el {
 
 /* ------------------ CONTENT ------------------ */
 
-
 .arch-info-content-container {
     display: flex;
     margin-top: 8em;
@@ -378,7 +380,7 @@ header .header-el {
 
 .two-img-container {
     margin-top: 5em;
-    justify-content:flex-start;
+    justify-content: flex-start;
 }
 
 /* images */
@@ -394,8 +396,8 @@ header .header-el {
 }
 
 .arch-info-content-img-container > p {
-    padding-top: .5em;
-    color: #B6B6B6;
+    padding-top: 0.5em;
+    color: #b6b6b6;
 }
 
 .big-img > img {
@@ -460,9 +462,9 @@ header .header-el {
 
 .bg-img-title {
     position: absolute;
-    padding-top: .5em;
-    color: #B6B6B6;
-    letter-spacing: .02em;
+    padding-top: 0.5em;
+    color: #b6b6b6;
+    letter-spacing: 0.02em;
     left: calc(50% + 2em);
 }
 
@@ -557,11 +559,12 @@ header .header-el {
 .arch-info-3 .border-right,
 .arch-info-3 .info-grid-cen,
 .arch-info-3 .auxiliary-line-middle {
-    border-color: var(--light-font-color)
+    border-color: var(--light-font-color);
 }
 
-.arch-info-3 .main-line, .arch-info-4 .main-line {
-    background-color: #D8D7DC;
+.arch-info-3 .main-line,
+.arch-info-4 .main-line {
+    background-color: #d8d7dc;
 }
 
 .arch-info-4 {
@@ -575,10 +578,10 @@ header .header-el {
 .arch-info-4 .border-right,
 .arch-info-4 .info-grid-cen,
 .arch-info-4 .auxiliary-line-middle {
-    border-color: var(--light-font-color)
+    border-color: var(--light-font-color);
 }
 
-.arch-info-4 .flex-end .arch-info-content-img-container{
+.arch-info-4 .flex-end .arch-info-content-img-container {
     padding-bottom: 2em;
 }
 
@@ -614,12 +617,12 @@ header .header-el {
     box-shadow: 3.83px 3.83px 19.15px 0px #85818140;
     margin: 0 auto;
     border-radius: 2em;
-    transition: all .25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 #game .game-btn:hover {
     scale: 1.005;
-    transform: translateY(-.2em);
+    transform: translateY(-0.2em);
     box-shadow: 3.83px 3.83px 19.15px 0px #85818160;
 }
 
@@ -668,7 +671,7 @@ header .header-el {
     padding: 0;
     color: var(--style-1-bg-color);
 }
-  
+
 .time-list li {
     margin: 1em;
 }
@@ -676,14 +679,14 @@ header .header-el {
 .time-btn {
     font-size: 1.1em;
     color: inherit;
-    padding: .5em 1.5em;
-    transition: transform .5s ease-in-out;
+    padding: 0.5em 1.5em;
+    transition: transform 0.5s ease-in-out;
 }
 
 .time-info {
     opacity: 0;
     color: var(--style-4-bg-color);
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .quiz-container {
@@ -703,6 +706,7 @@ header .header-el {
     font-size: 2.5em;
     font-weight: 500;
     margin: 0;
+    line-height: 2;
 }
 
 #time {
@@ -724,10 +728,11 @@ header .header-el {
     overflow: hidden;
 }
 
-.left, .right {
+.left,
+.right {
     width: 43%;
     margin-top: 25px;
-    margin-bottom: 25px;   
+    margin-bottom: 25px;
 }
 
 .board-item {
@@ -738,7 +743,7 @@ header .header-el {
     justify-content: center;
     align-items: center;
     font-weight: 300;
-    transition: box-shadow .25s linear;
+    transition: box-shadow 0.25s linear;
 }
 
 .board-item:not([disabled]):hover {
@@ -774,7 +779,7 @@ header .header-el {
 
 .board-open {
     color: var(--style-1-bg-color);
-    background-color: #D1CFCF;
+    background-color: #d1cfcf;
 }
 
 .right .board-item {
@@ -796,13 +801,13 @@ header .header-el {
 }
 
 .answer-btn {
-    margin-top: .8em;
+    margin-top: 0.8em;
     width: 48%;
     background-color: var(--style-1-bg-color);
     color: var(--style-4-bg-color);
     padding: 1em 2em;
     border-radius: 2em;
-    transition: scale .25s ease-in-out;
+    transition: scale 0.25s ease-in-out;
 }
 
 .answer-btn:hover {
@@ -828,12 +833,12 @@ header .header-el {
 
 .navigation a {
     color: var(--style-1-bg-color);
-    transition: transform .5s linear;
+    transition: transform 0.5s linear;
     font-size: 1.1em;
 }
 
 .navigation a:hover {
-    transform: translateY(-.25em);
+    transform: translateY(-0.25em);
 }
 
 @media (max-width: 900px) {
@@ -855,7 +860,7 @@ header .header-el {
         margin-top: -2.2em;
     }
     .main-page .img-2 {
-        margin-left: .8em;
+        margin-left: 0.8em;
     }
     .main-page .main-title {
         /* font-size: 3.5em; */
@@ -931,10 +936,10 @@ header .header-el {
         align-items: center;
     }
     .nav-container .nav-btn {
-        padding: .5em 2.5em;
+        padding: 0.5em 2.5em;
     }
     .info-grid-cen h2 {
-        padding-top: .3em;
+        padding-top: 0.3em;
         font-size: calc(1.8em + 3vw);
     }
     .arch-info-2 .arch-info-content-container {

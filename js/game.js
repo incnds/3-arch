@@ -35,17 +35,16 @@ timeList.addEventListener("click", (event) => {
 let timeBtn = document.querySelectorAll(".time-btn");
 timeBtn.forEach((timeEl) => {
     timeEl.addEventListener("mouseover", (e) => {
-        e.srcElement.style.transform = "translateY(-.3em)";
-        e.srcElement.style.borderBottom = "1px var(--style-4-bg-color) solid";
-        e.srcElement.parentElement.children[1].style.transform =
-            "translateY(.3em)";
-        e.srcElement.parentElement.children[1].style.opacity = "100";
+        e.target.style.transform = "translateY(-.3em)";
+        e.target.style.borderBottom = "1px var(--style-4-bg-color) solid";
+        e.target.parentElement.children[1].style.transform = "translateY(.3em)";
+        e.target.parentElement.children[1].style.opacity = "100";
     });
     timeEl.addEventListener("mouseout", (e) => {
-        e.srcElement.style.transform = "translateY(.3em)";
-        e.srcElement.style.borderBottom = "";
-        e.srcElement.parentElement.children[1].style.opacity = "0";
-        e.srcElement.parentElement.children[1].style.transform =
+        e.target.style.transform = "translateY(.3em)";
+        e.target.style.borderBottom = "";
+        e.target.parentElement.children[1].style.opacity = "0";
+        e.target.parentElement.children[1].style.transform =
             "translateY(-.3em)";
     });
 });

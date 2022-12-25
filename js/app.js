@@ -8,10 +8,6 @@ lines.forEach((line) => {
     line.style.width = `${mainLineWidth * linesWidth.shift()}px`;
 });
 
-// document.querySelector(".game-btn").addEventListener("click", function (e) {
-//     e.preventDefault();
-// });
-
 function setDisplayNoneNav() {
     nav.forEach((navEl) => {
         let navElNum =
@@ -25,7 +21,7 @@ function setDisplayNoneNav() {
 function renderStyleSection(styleNum) {
     setDisplayNoneNav();
     document.querySelector(`.arch-info-${styleNum}`).style.display = "block";
-    document.getElementById(`${styleNum}`).classList.add("cur-nav");
+    nav[styleNum - 1].classList.add("cur-nav");
 }
 
 let nav = document.querySelectorAll(".nav-btn");
@@ -34,17 +30,20 @@ renderStyleSection(1);
 nav.forEach((navEl) => {
     navEl.addEventListener("click", (e) => {
         e.preventDefault;
-        e.srcElement.style.transform = "translateY(.2em)";
-        renderStyleSection(e.srcElement.id);
+        let styleNum =
+            Array.prototype.indexOf.call(navEl.parentElement.children, navEl) +
+            1;
+        e.target.style.transform = "translateY(.2em)";
+        renderStyleSection(styleNum);
     });
     navEl.addEventListener("mouseover", (e) => {
-        if (!e.srcElement.classList.contains("cur-nav")) {
-            e.srcElement.style.transform = "translateY(-.2em)";
+        if (!e.target.classList.contains("cur-nav")) {
+            e.target.style.transform = "translateY(-.2em)";
         }
     });
     navEl.addEventListener("mouseout", (e) => {
-        if (!e.srcElement.classList.contains("cur-nav")) {
-            e.srcElement.style.transform = "translateY(.2em)";
+        if (!e.target.classList.contains("cur-nav")) {
+            e.target.style.transform = "translateY(.2em)";
         }
     });
 });
