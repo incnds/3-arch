@@ -972,7 +972,7 @@ header .header-el {
     }
 }
 
-@media (max-width: 900px) {
+@media (orientation: portrait) {
     :root {
         font-size: 18px;
     }
