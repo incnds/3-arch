@@ -840,36 +840,6 @@ header .header-el {
     transform: translateY(-0.25em);
 }
 
-@media (max-width: 900px) {
-    :root {
-        font-size: 14px;
-    }
-    .arch-info-2 .column-direction {
-        width: 120%;
-    }
-    .arch-info-2 .big-img > img {
-        height: 62%;
-        object-fit: cover;
-        margin-right: 0;
-    }
-    .arch-info-title {
-        font-size: 5em;
-    }
-    .arch-info-2 .arch-info-title {
-        margin-top: -2em;
-    }
-    .main-page .img-2 {
-        margin-left: 0.8em;
-    }
-    .main-page .main-title {
-        /* font-size: 3.5em; */
-        font-size: calc(2.5em + 1.5vw);
-    }
-    .main-page .main-title:nth-child(2) {
-        margin-right: 0;
-    }
-}
-
 @media (max-width: 1050px) {
     .arch-info-title {
         font-size: 6em;
@@ -1002,7 +972,7 @@ header .header-el {
     }
 }
 
-@media (max-width: 950px) and (orientation: portrait) {
+@media (max-width: 900px) {
     :root {
         font-size: 18px;
     }
@@ -1044,5 +1014,26 @@ header .header-el {
     }
     .screen .time-btn {
         font-size: 1.4rem;
+    }
+
+    .arch-info-2 .column-direction {
+        width: 120%;
+    }
+    .arch-info-2 .big-img > img {
+        height: 62%;
+        object-fit: cover;
+        margin-right: 0;
+    }
+    .arch-info-2 .arch-info-title {
+        margin-top: -2em;
+    }
+    .main-page .img-2 {
+        margin-left: 0.8em;
+    }
+    .main-page .main-title {
+        font-size: calc(2.5em + 1.5vw);
+    }
+    .main-page .main-title:nth-child(2) {
+        margin-right: 0;
     }
 }
